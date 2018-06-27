@@ -1,0 +1,22 @@
+{
+  "name": "Old Reddit Redirect",
+  "version": "1.0",
+  "description": "Chrome Extension that Navigates to Old Reddit!",
+  "icons": {
+    "16": "snoo.jpg",
+    "48": "snoo.jpg",
+    "128": "snoo.jpg"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.reddit.com/*"],
+      "run-at": "document_start",
+      "js": ["contentScript.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "manifest_version": 2
+}
